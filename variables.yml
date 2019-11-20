@@ -8,7 +8,7 @@
     win_user:
       name: user_{{usr}}
       state: present
-  - name: Creating xa[nodename]
+  - name: Creating xa'servername'
     win_user:
       name: xa{{servername}}
       state: present
