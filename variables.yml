@@ -10,7 +10,7 @@
       state: present
   - name: Creating xa[nodename]
     win_user:
-      name: "{{xaservername}}"
+      name: xa{{servername}}
       state: present
       groups: 
         - Administrators
