@@ -10,7 +10,7 @@
       state: present
   - name: Creating xa'servername'
     win_user:
-      name: xa{{servername}}
+      name: xa{{ansible_facts.hostname}}
       state: present
       groups: 
         - Administrators
