@@ -2,15 +2,15 @@
 - name: Creating users
   hosts: all
   vars_files:
-    - vars/users.yml
+    - ./vars/users.yml
   tasks:
   - name: Creating user {usr}
     win_user:
-      name: user_{usr}
+      name: user_{{usr}}
       state: present
-  - name: Creating xa{nodename}
+  - name: Creating xa[nodename]
     win_user:
-      name: {xaservername}
+      name: {{xaservername}}
       state: present
       groups: 
         - Administrators
