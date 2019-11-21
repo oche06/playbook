@@ -3,7 +3,7 @@
   hosts: all
   tasks:
   - name: List Domain Controllers in domain
-    win_shell: "nltest /dclist:EXAMPLE.COM"
+    win_shell: "nltest /dclist:OCHE.COM"
     register: domain_list
     until: domain_list.stderr == ""
     retries: 10

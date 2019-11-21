@@ -10,9 +10,9 @@
       scope: global
   - name: Adding now
     win_domain_user:
-      name: rajat
-      firstname: Rajat
-      surname: Agrawal
+      name: oche001
+      firstname: Yusry
+      surname: Yusoff
       company: Red Hat Inc.
       password: r3dh4t1!
       state: present
