@@ -1,12 +1,12 @@
 ---
-- name: Testing simple loops
+- name: Testing Simple loops
   hosts: all
-  tasks:
+  tasks: 
     - name: Install packages
-      win_chocolatey:
-        name: {{ item }}
+      win_chocolatey: 
+        name: "{{ item }}"
         state: present
       loop:
-        - jre8
-        - javaruntime-preventasktoolbar
-        - dropbox
+      - jre8
+      - javaruntime-preventasktoolbar
+      - dropbox
