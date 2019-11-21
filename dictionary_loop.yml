@@ -1,0 +1,17 @@
+---
+- name: Testing dictionary based loop
+  hosts: all
+  tasks:
+    - name: Creating local users
+      win_user:
+        name: "{{ item.name }}"
+        groups: "{{ item.grp}}"
+        description: "{{ item.desc }}"
+        state: present
+      loop:
+      - { name: 'itadmin', grp: 'Administrators', desc: 'New admin user'} #This is the old format, meant for programmers
+      - { name: 'ituser1', grp: 'Users', desc: 'Local user'} #This is the old format, meant for programmers
+      - name: 'ituser2' #This is the new format, meant for system administrators
+        grp: 'Power Users' #This is the new format, meant for system administrators
+        desc: 'Another local user' #This is the new format, meant for system administrators
+        
