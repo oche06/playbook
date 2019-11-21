@@ -1,2 +1,3 @@
 # playbook
-Playbook for Ansible Training
+
+Repository for Ansible Playbooks used during Ansible Training.
