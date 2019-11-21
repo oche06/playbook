@@ -23,6 +23,7 @@
     win_reboot:
       msg: "Rebooting Server..."
       pre_reboot_delay: 60
+      reboot_timeout: 600
     when: domain_install.reboot_required
   - name: Promoting the server to a domain controller.
     win_domain_controller:
