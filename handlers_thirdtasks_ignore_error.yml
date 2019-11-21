@@ -15,7 +15,7 @@
     failed_when: true
     ignore_errors: true
 
-  - name: This is the second task
+  - name: This is the third task
     debug:
       msg: final task
 

@@ -1,10 +1,11 @@
 ---
 - name: Testing Handlers
   hosts: all
+  force_handlers: true
   tasks:
-  - name: First task - Install .NET 4.6.1
+  - name: First task - Install Flash Player
     win_chocolatey:
-      name: dotnet4.6.1
+      name: flashplayerppapi
       state: present
     notify:
     - reboot server
@@ -14,7 +15,7 @@
       msg: failing the task to simulate test
     failed_when: true
 
-  - name: This is the second task
+  - name: This is the third task
     debug:
       msg: final task
 
