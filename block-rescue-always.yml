@@ -1,0 +1,23 @@
+---
+- name: Testing the usage of Block, Rescue and Always
+  hosts: all
+  force_handlers: true
+  tasks:
+  - block:
+    - name: Install 7zip
+      win_chocolatey:
+        name:  7zip
+        state: present
+    rescue:
+    - name: Remove 7zip
+      win_chocolatey:
+        name: 7zip
+        state: absent
+    always:
+    - name: iOS is better than Android
+      debug:
+        msg: Not a chance. Android for life!
+  
+  - name: This is a task
+    debug:
+      msg: Can you see this message?
