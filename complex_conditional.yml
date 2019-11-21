@@ -14,7 +14,7 @@
         loop: "{{ my_package }}"
       when: ansible_facts['distribution'] == "Microsoft Windows Server 2016 Core" and ansible_facts['architecture'] == "64-bit" #Both conditions must be fulfilled.
 
-      #You can also put something like
-      when: 
-        - ansible_facts['distribution'] == "Microsoft Windows Server 2016 Core"
-        - ansible_facts['architecture'] == "64-bit"
+      ##You can also put something like
+      #when: 
+      #  - ansible_facts['distribution'] == "Microsoft Windows Server 2016 Core"
+      #  - ansible_facts['architecture'] == "64-bit"
