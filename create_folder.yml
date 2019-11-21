@@ -1,0 +1,8 @@
+---
+- name: Creating a folder
+  hosts: all
+  tasks:
+    - name: Create a folder and subfolder
+      win_file:
+        path: c:\temp\folder\subfolder
+        state: directory
